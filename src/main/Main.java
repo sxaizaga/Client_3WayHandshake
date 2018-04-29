@@ -11,10 +11,11 @@ import java.net.Socket;
 import java.util.Random;
 
 public class Main {
+	
 
 	public static void main(String[] args) {
 		
-		String host = "192.168.0.107";
+		String host = "192.168.0.6";
 		int port=49190;
 		Socket sc;		
 		String segmentIN="", segmentOUT="";
@@ -45,7 +46,9 @@ public class Main {
 			segmentOUT=(segOut+i)+"";
 			
 			if(messageIN.equals("SYN+ACK")) {
-				System.out.println("Segment: "+segmentIN+"\nMessage: "+messageIN);
+				System.out.println("==================");
+				System.out.println("Segment: "+segmentIN+"   .|\n==================\nMessage: "+messageIN+".|");
+				System.out.println("==================\n");
 				Thread.sleep(4000);
 				output.writeBytes(segmentOUT+"\n");
 				output.writeBytes("ACK\n");
