@@ -16,7 +16,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		String host = "192.168.0.6";
+		String host = "192.168.100.102";
 		int port=49190;
 		Socket sc;		
 		String segmentIN="", segmentOUT="";
